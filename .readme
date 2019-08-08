@@ -1,0 +1,18 @@
+Go terminal, create folder, etc etc.
+
+1. pipenv shell
+2. pipenv install django
+3. django-admin startproject (projectname)
+4. (cd into project)
+5. python manage.py runserver
+(maybe have to run python manage.py makemigrations, then python manage.py migrate)
+
+6. if using mongo, must run pipenv install djongo
+
+follow https://docs.djangoproject.com/en/2.2/intro/tutorial01/
+for more info
+
+
+MongoDB Atlas
+ryangrunest
+!234QwerAsdf

@@ -7,6 +7,9 @@ verify_ssl = true
 
 [packages]
 django = "*"
+djongo = "*"
+pymongo = "*"
+dnspython = "*"
 
 [requires]
 python_version = "3.7"

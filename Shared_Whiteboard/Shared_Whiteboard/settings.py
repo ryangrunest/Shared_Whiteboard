@@ -75,8 +75,11 @@ WSGI_APPLICATION = 'Shared_Whiteboard.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'djongo',
+        'NAME': 'Shared-Whiteboard',
+        'HOST': 'mongodb+srv://ryangrunest:!234QwerAsdf@shared-whiteboard-ppjjo.mongodb.net/test?retryWrites=true&w=majority',
+        'USER': 'ryangrunest',
+        'PASSWORD': '!234QwerAsdf'
     }
 }
 
