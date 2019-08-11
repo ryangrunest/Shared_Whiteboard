@@ -19,18 +19,25 @@ class App extends Component {
     // loadSaveData(saveData:String, immediata:Boolean) boolean flag loads immediately instead of live drawing it
   }
   
-  handleClick() {
+  handleClick(e) {
+    e.preventDefault();
+    // store the draw data in state
     this.setState({
+      // this.refs.canvas.getSaveData is a function within the CanvasDraw child component
       data: this.refs.canvas.getSaveData(),
+      // then alert the state
     }, () => alert(this.state.data));
-    // // let savedData = this.refs.canvas.getSaveData();
-    // alert(this.state.data);
   }
+
   render() {
     return (
       <div className="App" onClick={() => this.handleClick}>
-        <CanvasDraw ref="canvas" />
-        <button onClick={() => this.handleClick()}>Save</button>
+        <CanvasDraw
+          ref="canvas" 
+          canvasWidth={document.documentElement.clientWidth * 0.8}
+          canvasHeight={document.documentElement.clientHeight * 0.8}
+        />
+        <button className="App-submit-btn" onClick={(event) => this.handleClick(event)}>Save</button>
       </div>
     );
   }
