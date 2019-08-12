@@ -25,7 +25,11 @@ SECRET_KEY = 'mwnt2+z0=2077x@*y#=(x3&uq6g9h$2l8f2-*t-kqfoh6fy7a_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "0.0.0.0/0",
+    "127.0.0.1",
+    '*'
+]
 
 
 # Application definition
@@ -37,7 +41,16 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'lines',
+    'rest_framework'
 ]
+
+# WEBPACK_LOADER = {
+#     'DEFAULT': {
+#             'BUNDLE_DIR_NAME': 'bundles/',
+#             'STATS_FILE': os.path.join(BASE_DIR, 'webpack-stats.dev.json'),
+#         }
+# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

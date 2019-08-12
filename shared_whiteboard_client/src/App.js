@@ -36,6 +36,7 @@ class App extends Component {
           ref="canvas" 
           canvasWidth={document.documentElement.clientWidth * 0.8}
           canvasHeight={document.documentElement.clientHeight * 0.8}
+          lazyRadius={2}
         />
         <button className="App-submit-btn" onClick={(event) => this.handleClick(event)}>Save</button>
       </div>
