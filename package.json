@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteoard/frontend/static/frontend/main.js",
+    "build": "webpack --mode production ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteoard/frontend/static/frontend/main.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,7 @@
   "homepage": "https://github.com/ryangrunest/Shared_Whiteboard#readme",
   "devDependencies": {
     "@babel/core": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
@@ -29,6 +31,7 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
+    "react-canvas-draw": "^1.0.2",
     "react-dom": "^16.9.0"
   }
 }

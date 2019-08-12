@@ -21,6 +21,6 @@ from django.views.generic import TemplateView
 
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
+    path('', include('frontend.urls')),
     path('', include('lines.urls')),
 ]
