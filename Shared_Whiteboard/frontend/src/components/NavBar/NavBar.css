@@ -1,0 +1,23 @@
+.NavBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: 10vh;
+  padding: 0;
+  margin: 0;
+  background: rgb(145, 163, 236);
+  background: linear-gradient(
+    90deg,
+    rgba(145, 163, 236, 1) 0%,
+    rgba(99, 91, 235, 1) 69%,
+    rgba(84, 75, 238, 1) 100%
+  );
+}
+
+.NavBar-header {
+  color: white;
+  padding: 0;
+  margin: 0;
+}

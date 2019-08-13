@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import CanvasDraw from "react-canvas-draw";
 import axios from "axios";
 
+import "./App.css";
+import NavBar from "./Navbar";
 import Button from "./Button";
 
 class App extends Component {
@@ -60,12 +62,15 @@ class App extends Component {
   render() {
     return (
       <div className="App" onClick={() => this.handleClick}>
-        <CanvasDraw
-          ref="canvas"
-          canvasWidth={document.documentElement.clientWidth * 0.8}
-          canvasHeight={document.documentElement.clientHeight * 0.8}
-          lazyRadius={2}
-        />
+        <NavBar />
+        <div className="Canvas-container">
+          <CanvasDraw
+            ref="canvas"
+            canvasWidth={document.documentElement.clientWidth}
+            canvasHeight={document.documentElement.clientHeight * 0.6}
+            lazyRadius={2}
+          />
+        </div>
         <Button />
         <button
           className="App-submit-btn"
