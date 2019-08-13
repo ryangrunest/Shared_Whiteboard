@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js",
+    "dev": "webpack --mode development --watch ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js"
   },
   "repository": {
@@ -29,6 +29,7 @@
     "webpack-cli": "^3.3.6"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-canvas-draw": "^1.0.2",
