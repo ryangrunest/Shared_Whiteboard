@@ -4,9 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "webpack --mode production ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom",
     "dev": "webpack --mode development --watch ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js",
-    "build": "webpack --mode production ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js"
+    "build": "webpack --mode production ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js",
+    "postinstall": "npm run build"
+  },
+  "engines": {
+    "node": "10.15.0",
+    "npm": "6.10.3"
   },
   "repository": {
     "type": "git",
