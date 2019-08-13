@@ -4,6 +4,8 @@ import ReactDOM from "react-dom";
 import CanvasDraw from "react-canvas-draw";
 import axios from "axios";
 
+import Button from "./Button";
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -64,6 +66,7 @@ class App extends Component {
           canvasHeight={document.documentElement.clientHeight * 0.8}
           lazyRadius={2}
         />
+        <Button />
         <button
           className="App-submit-btn"
           onClick={event => this.handleClick(event)}
