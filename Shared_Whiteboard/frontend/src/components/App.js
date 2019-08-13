@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-
 import CanvasDraw from "react-canvas-draw";
 import axios from "axios";
 
@@ -13,7 +12,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: ""
+      data: "",
+      brushColor: "#3F5CCC"
     };
   }
 
@@ -87,6 +87,13 @@ class App extends Component {
     element.click();
   }
 
+  // change brush color
+  changeBrushColor = (e, color) => {
+    e.preventDefault();
+    this.setState({ brushColor: color });
+    console.log("changing brush color");
+  };
+
   render() {
     return (
       <div className="App">
@@ -115,10 +122,11 @@ class App extends Component {
               canvasWidth={document.documentElement.clientWidth * 0.9}
               canvasHeight={document.documentElement.clientHeight * 0.6}
               lazyRadius={2}
+              brushColor={this.state.brushColor}
             />
           </div>
         </section>
-        <ButtonContainer />
+        <ButtonContainer changeBrushColor={this.changeBrushColor} />
       </div>
     );
   }

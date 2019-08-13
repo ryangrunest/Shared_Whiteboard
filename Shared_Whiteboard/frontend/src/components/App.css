@@ -61,8 +61,8 @@ body,
 
 .App-submit-btn:hover {
   cursor: pointer;
-  -webkit-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
+  /* -webkit-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75); */
   /* box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75); */
   background: rgb(236, 145, 189);
   background: linear-gradient(

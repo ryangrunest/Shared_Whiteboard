@@ -4,7 +4,12 @@ import "./Button.css";
 
 class Button extends Component {
   static defaultProps = {
-    background: "#B35337"
+    background: "#FF8440",
+    changeBrushColor: (e, color) => {
+      e.preventDefault();
+      console.log("changing brush color!");
+      this.setState({ brushColor: color });
+    }
   };
   constructor(props) {
     super(props);
@@ -15,6 +20,9 @@ class Button extends Component {
       <button
         className="Button-button"
         style={{ backgroundColor: this.props.background }}
+        onClick={event => {
+          this.props.changeBrushColor(event, this.props.background);
+        }}
       />
     );
   }
