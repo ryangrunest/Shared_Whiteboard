@@ -42,7 +42,23 @@ class App extends Component {
     console.log("loadData finished!");
   }
 
-  handleClick(e) {
+  // reset canvas, append blank canvas to db
+  resetData(e) {
+    e.preventDefault();
+    this.setState(
+      {
+        data: '{"lines":[],"width":1296,"height":458.4}'
+      },
+      () => {
+        axios.post("api/lines/", { line: this.state.data }).then(() => {
+          this.refs.canvas.loadSaveData(this.state.data, true);
+        });
+      }
+    );
+  }
+
+  // save and post canvas drawing on mouseup
+  handleMouseUp(e) {
     e.preventDefault();
     // store the draw data in state
     let savedData = this.refs.canvas.getSaveData();
@@ -60,14 +76,39 @@ class App extends Component {
     });
   }
 
+  // download canvas data as .txt doc
+  downloadTxtFile(e) {
+    e.preventDefault();
+    const element = document.createElement("a");
+    const file = new Blob([this.state.data], { type: "text/plain" });
+    element.href = URL.createObjectURL(file);
+    element.download = "WhiteboardData.txt";
+    // document.body.appendChild(element); // required for this to work in firefox
+    element.click();
+  }
+
   render() {
     return (
       <div className="App">
         <NavBar />
+        <div className="App-flex-container">
+          <button
+            className="App-submit-btn"
+            onClick={event => this.resetData(event)}
+          >
+            Clear Drawing
+          </button>
+          <button
+            className="App-submit-btn"
+            onClick={event => this.downloadTxtFile(event)}
+          >
+            Download Draw Data
+          </button>
+        </div>
         <section className="App-main-section">
           <div
             className="Canvas-container"
-            onMouseUp={event => this.handleClick(event)}
+            onMouseUp={event => this.handleMouseUp(event)}
           >
             <CanvasDraw
               ref="canvas"
@@ -78,12 +119,6 @@ class App extends Component {
           </div>
         </section>
         <ButtonContainer />
-        <button
-          className="App-submit-btn"
-          onClick={event => this.handleClick(event)}
-        >
-          Save Drawing
-        </button>
       </div>
     );
   }

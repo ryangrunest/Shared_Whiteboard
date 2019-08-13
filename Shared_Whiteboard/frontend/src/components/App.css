@@ -14,6 +14,13 @@ body,
   padding: 0;
   margin: 0;
 }
+.App-flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin-top: 2vh;
+}
 .App-main-section {
   display: flex;
   width: 100vw;
@@ -22,7 +29,7 @@ body,
   flex-wrap: nowrap;
 }
 .Canvas-container {
-  margin-top: 5vh;
+  margin-top: 2vh;
   width: 90vw;
   display: flex;
   justify-content: center;
@@ -35,7 +42,7 @@ body,
 .App-submit-btn {
   font-family: "Pacifico", cursive;
   font-size: 1.5rem;
-  width: 200px;
+  width: 300px;
   height: 50px;
   border: 0px;
   border-radius: 15px;
