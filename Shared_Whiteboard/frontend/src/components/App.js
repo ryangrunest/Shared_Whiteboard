@@ -46,7 +46,7 @@ class App extends Component {
     e.preventDefault();
     // store the draw data in state
     let savedData = this.refs.canvas.getSaveData();
-    console.log(savedData);
+    // console.log(savedData);
     axios.post("api/lines/", { line: savedData }).then(() => {
       this.setState(
         {
@@ -62,10 +62,13 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App" onClick={() => this.handleClick}>
+      <div className="App">
         <NavBar />
         <section className="App-main-section">
-          <div className="Canvas-container">
+          <div
+            className="Canvas-container"
+            onMouseUp={event => this.handleClick(event)}
+          >
             <CanvasDraw
               ref="canvas"
               canvasWidth={document.documentElement.clientWidth * 0.9}
@@ -75,7 +78,6 @@ class App extends Component {
           </div>
         </section>
         <ButtonContainer />
-        {/* <Button /> */}
         <button
           className="App-submit-btn"
           onClick={event => this.handleClick(event)}

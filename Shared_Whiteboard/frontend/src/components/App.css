@@ -32,3 +32,36 @@ body,
   -moz-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
   box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
 }
+.App-submit-btn {
+  font-family: "Pacifico", cursive;
+  font-size: 1.5rem;
+  width: 200px;
+  height: 50px;
+  border: 0px;
+  border-radius: 15px;
+  background: rgb(145, 163, 236);
+  background: linear-gradient(
+    90deg,
+    rgba(145, 163, 236, 1) 0%,
+    rgba(99, 91, 235, 1) 69%,
+    rgba(84, 75, 238, 1) 100%
+  );
+  color: white;
+  display: block;
+  margin: 0 auto;
+  /* transition: 0.3s ease-in-out all; */
+}
+
+.App-submit-btn:hover {
+  cursor: pointer;
+  -webkit-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
+  /* box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75); */
+  background: rgb(236, 145, 189);
+  background: linear-gradient(
+    90deg,
+    rgba(236, 145, 189, 1) 0%,
+    rgba(235, 91, 124, 1) 50%,
+    rgba(84, 75, 238, 1) 100%
+  );
+}
