@@ -1,5 +1,14 @@
 .Button-button {
-  width: 10vw;
-  height: 20vh;
+  width: 75px;
+  height: 75px;
+  border-radius: 10px;
+  transition: 0.4s ease-in-out all;
+  border: 0px;
+}
+.Button-button:hover {
   border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-shadow: -1px 0px 7px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 7px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 0px 7px rgba(0, 0, 0, 0.75);
 }

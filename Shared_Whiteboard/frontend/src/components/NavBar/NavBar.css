@@ -4,7 +4,7 @@
   align-items: center;
   flex-wrap: wrap;
   width: 100vw;
-  height: 10vh;
+  height: 15vh;
   padding: 0;
   margin: 0;
   background: rgb(145, 163, 236);
@@ -14,6 +14,9 @@
     rgba(99, 91, 235, 1) 69%,
     rgba(84, 75, 238, 1) 100%
   );
+  -webkit-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 0px 18px -8px rgba(0, 0, 0, 0.75);
 }
 
 .NavBar-header {

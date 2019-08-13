@@ -6,7 +6,8 @@ import axios from "axios";
 
 import "./App.css";
 import NavBar from "./Navbar";
-import Button from "./Button";
+import ButtonContainer from "./ButtonContainer";
+// import Button from "./Button";
 
 class App extends Component {
   constructor(props) {
@@ -63,20 +64,23 @@ class App extends Component {
     return (
       <div className="App" onClick={() => this.handleClick}>
         <NavBar />
-        <div className="Canvas-container">
-          <CanvasDraw
-            ref="canvas"
-            canvasWidth={document.documentElement.clientWidth}
-            canvasHeight={document.documentElement.clientHeight * 0.6}
-            lazyRadius={2}
-          />
-        </div>
-        <Button />
+        <section className="App-main-section">
+          <div className="Canvas-container">
+            <CanvasDraw
+              ref="canvas"
+              canvasWidth={document.documentElement.clientWidth * 0.9}
+              canvasHeight={document.documentElement.clientHeight * 0.6}
+              lazyRadius={2}
+            />
+          </div>
+        </section>
+        <ButtonContainer />
+        {/* <Button /> */}
         <button
           className="App-submit-btn"
           onClick={event => this.handleClick(event)}
         >
-          Save
+          Save Drawing
         </button>
       </div>
     );

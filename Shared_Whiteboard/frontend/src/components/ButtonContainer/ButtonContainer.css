@@ -1,0 +1,8 @@
+.ButtonContainer {
+  margin-top: 2vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100vw;
+}

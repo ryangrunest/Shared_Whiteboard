@@ -4,7 +4,7 @@ import "./Button.css";
 
 class Button extends Component {
   static defaultProps = {
-    backgroundColor: "#B35337"
+    background: "#B35337"
   };
   constructor(props) {
     super(props);
@@ -14,7 +14,7 @@ class Button extends Component {
     return (
       <button
         className="Button-button"
-        style={{ backgroundColor: this.props.backgroundColor }}
+        style={{ backgroundColor: this.props.background }}
       />
     );
   }
