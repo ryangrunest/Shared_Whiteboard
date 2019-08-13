@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "webpack --mode production ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js",
     "dev": "webpack --mode development --watch ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js",
     "build": "webpack --mode production ./Shared_Whiteboard/frontend/src/index.js --output ./Shared_Whiteboard/frontend/static/frontend/main.js"
   },
